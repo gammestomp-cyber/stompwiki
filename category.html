@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Categories</title>
+<style>
+:root{--tx:#fdeceb;--mu:#d7a8ab;--ac:#ff5c5c;--ln:rgba(255,150,150,.3);--glass:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.05) 48%,rgba(28,0,6,.3) 50%,rgba(110,20,32,.35));--meat:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.42)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='a' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.008 .013' numOctaves='5' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32  0 0 0 0 .016  0 0 0 0 .03  2 0 0 0 -.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23a%29'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='a' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.045 .007' numOctaves='3' seed='9' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .14  0 0 0 0 0  0 0 0 0 .01  2.4 0 0 0 -1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23a%29'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='a' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.022 .022' numOctaves='2' seed='21' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .62  0 0 0 0 .07  0 0 0 0 .08  3.2 0 0 0 -1.75'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23a%29'/%3E%3C/svg%3E"),radial-gradient(ellipse at 50% 30%,rgba(0,0,0,0),rgba(0,0,0,.55) 70%,rgba(0,0,0,.88)),#070103;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--tx);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif;background:var(--meat);background-attachment:fixed}
+a{color:var(--ac)}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+.top{position:sticky;top:0;z-index:5;padding:.6rem 1rem;background:var(--glass),rgba(42,8,14,.6);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid var(--ln);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 24px rgba(0,0,0,.55)}
+.bar,main{margin:0}
+.bar{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:600;font-size:1.25rem;color:#fff;text-decoration:none;text-shadow:0 0 14px rgba(255,92,92,.7)}
+.logo{height:34px;width:auto;filter:drop-shadow(0 0 6px rgba(255,92,92,.6))}
+nav{display:flex;gap:.3rem;font-size:.92rem}
+nav a{padding:.25rem .85rem;border:1px solid transparent;border-radius:5px;color:var(--tx);text-decoration:none}
+nav a:hover{border-color:var(--ln);background:var(--glass);box-shadow:0 0 10px rgba(255,92,92,.35)}
+main{padding:1.5rem 1.5rem 4rem}
+h1{margin:0 0 1.5rem;font-size:1.8rem;font-weight:600;text-shadow:0 0 18px rgba(255,92,92,.5)}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.cat{padding:1rem 1.2rem;border:1px solid var(--ln);border-radius:8px;background:var(--glass),rgba(62,14,22,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 16px rgba(0,0,0,.45)}
+.cat h2{margin:0 0 .5rem;padding-bottom:.3rem;border-bottom:1px solid var(--ln);font-size:1.1rem;font-weight:600;text-transform:capitalize;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.cat ul{list-style:none;margin:0;padding:0}
+.cat li{padding:.15rem 0}
+#note{color:var(--mu)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="index.html"><img class="logo" src="logo.png" alt="" onerror="this.remove()"><span>StompWiki</span></a>
+    <nav><a href="index.html">Home</a><a href="category.html">Categories</a></nav>
+  </div>
+</header>
+
+<main>
+  <h1>Categories</h1>
+  <div class="cats" id="cats"></div>
+  <p id="note" hidden>No pages yet. Build pages in the Page Maker, export, and unzip the files into this folder.</p>
+</main>
+
+<script id="wd" type="application/json">{"pages":[{"file":"page_ragna.html","title":"Ragna","desc":"Ragna is our god.","tags":["characters","gods"],"cover":"image_2_mn0e.png"},{"file":"page_history-of-official-stompgame-some-of-our-stuff.html","title":"History of official stompgame (+ some of our stuff)","desc":"A breif history of StompGame!","tags":["articles"],"cover":"image_4_2evr.jpg"},{"file":"page_mikka.html","title":"Mikka","desc":"Mikka is a joyous kitty who loves stomping! If only she was aware it was all a game.","tags":["characters","gods"],"cover":"bloodymary.png"},{"file":"page_stom-p-gamme.html","title":"Stom P. Gamme","desc":"Stom P. Gamme, the royal scientist.","tags":["characters"],"cover":"stom%20p.png"},{"file":"page_the-1st-stomping.html","title":"The 1st Stomping","desc":"The first time the ants were stomped.","tags":["articles"],"cover":"image_16_6x7v.png"},{"file":"page_full-stompgame-timeline.html","title":"Full StompGame Timeline","desc":"The full timeline of STOMPGAME! Please take into full consideration these events still happen today in the alternate timeline,","tags":["articles"],"cover":"image_17_7hpj.png"},{"file":"page_bow-down-up.html","title":"Bow Down Up!","desc":"Super Mario!","tags":["characters"],"cover":"mikka%20(1).png"},{"file":"page_dowser.html","title":"Dowser","desc":"Dowser is old. ","tags":["characters","gods"],"cover":"image_2026-11-24_010838164.png"},{"file":"page_stompganity.html","title":"Stompganity","desc":"A working name for our wonderful study group!","tags":["articles"],"cover":"stompganity.png"}]}</script>
+<script>
+/* The page list is stored in the data block above. The Page Maker rewrites it on every export. */
+const pages=JSON.parse(document.getElementById('wd').textContent).pages||[],map={},out=document.getElementById('cats');
+pages.forEach(p=>(p.tags.length?p.tags:['uncategorized']).forEach(t=>(map[t]=map[t]||[]).push(p)));
+Object.keys(map).sort((a,b)=>(a==='uncategorized')-(b==='uncategorized')||a.localeCompare(b)).forEach(t=>{
+  const s=document.createElement('section'),h=document.createElement('h2'),ul=document.createElement('ul');
+  s.className='cat';h.textContent=t;
+  map[t].sort((a,b)=>a.title.localeCompare(b.title)).forEach(p=>{
+    const li=document.createElement('li'),a=document.createElement('a');
+    a.href=p.file;a.textContent=p.title;li.append(a);ul.append(li);
+  });
+  s.append(h,ul);out.append(s);
+});
+document.getElementById('note').hidden=pages.length>0;
+</script>
+<div id="warn" role="dialog" aria-modal="true" aria-labelledby="warnT"><div class="warnB"><h2 id="warnT">&#9888; Warning</h2><p>Please note this site is not a real wiki. It is a very complex inside joke / project. It has blood, and a bunch of other nasty stuff.</p><div class="warnR"><button type="button" onclick="warnOk()">I understand, continue</button><button type="button" class="warnX" onclick="warnNo()">Leave</button></div></div></div>
+<style>
+#warn{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(8,1,3,.96);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
+.warnB{max-width:30rem;padding:1.6rem 1.8rem;border:1px solid rgba(255,150,150,.4);border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 48%,rgba(28,0,6,.3) 50%,rgba(110,20,32,.35)),rgba(42,8,14,.9);box-shadow:0 0 40px rgba(255,60,60,.25),inset 0 1px 0 rgba(255,255,255,.3);color:#fdeceb;text-align:center}
+.warnB h2{margin:0 0 .6rem;font-size:1.6rem;color:#ff5c5c;text-shadow:0 0 14px rgba(255,92,92,.6)}
+.warnB p{margin:0 0 1.2rem}
+.warnR{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.warnR button{padding:.45rem 1.1rem;border:1px solid #ff9b9b;border-radius:6px;background:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,.08) 49%,rgba(90,0,10,.1) 50%,rgba(255,110,110,.3)),#c81e2e;color:#fff;font:inherit;font-weight:600;cursor:pointer;text-shadow:0 1px 1px rgba(0,0,0,.6)}
+.warnR button.warnX{background:rgba(96,18,30,.5);font-weight:400}
+.warnR button:hover{filter:brightness(1.2)}
+</style>
+<script>
+try{if(sessionStorage.getItem('warned'))document.getElementById('warn').remove()}catch(e){}
+function warnOk(){try{sessionStorage.setItem('warned','1')}catch(e){}document.getElementById('warn').remove()}
+function warnNo(){history.length>1?history.back():location.href='about:blank'}
+</script>
+</body>
+</html>
