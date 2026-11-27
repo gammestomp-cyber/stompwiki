@@ -20,6 +20,16 @@ h1{margin:0;padding:1.6cqw 3.125cqw 0;font-size:2.6cqw}
 .bt{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;color:#fff;font-weight:600;border:1px solid #ff9b9b;border-radius:.5em;background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,.1) 49%,rgba(90,0,10,.1) 50%,rgba(255,110,110,.35)),#c81e2e;box-shadow:0 0 12px rgba(255,92,92,.6),inset 0 1px 0 rgba(255,255,255,.6);text-shadow:0 1px 1px rgba(0,0,0,.6)}
 a.bt:hover{filter:brightness(1.15)}
 .hid{display:none!important}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(16em,1fr));gap:1em;align-content:start}
+.card{display:block;padding:.8em;border:1px solid var(--ln);border-radius:8px;background:var(--glass),rgba(62,14,22,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 16px rgba(0,0,0,.45);color:var(--tx);text-decoration:none;transition:box-shadow .15s,border-color .15s}
+.card:hover{border-color:#ff9b9b;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 18px rgba(255,92,92,.55),0 4px 16px rgba(0,0,0,.45)}
+.cov{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;margin-bottom:.6em;border:1px solid var(--ln);border-radius:5px}
+.card h3{margin:0 .2em .2em;font-size:1.05em;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.card p{margin:0 .2em;color:var(--mu);font-size:.9em;line-height:1.5}
+.tags{display:flex;gap:.3em;flex-wrap:wrap;margin:.6em .2em .1em}
+.tags span{font-size:.75em;color:#ffc4c4;background:rgba(255,92,92,.14);border:1px solid rgba(255,92,92,.35);border-radius:999px;padding:0 .55em}
+.toc{display:flex;flex-direction:column;gap:.2em}.toc a{display:block}
+.b{scroll-margin-top:5rem}html{scroll-behavior:smooth}
 .bt.bi{background:none;border:0;box-shadow:none}
 .tt{display:flex;flex-direction:column}
 .tl{display:flex;gap:.3em;flex-wrap:wrap;margin-bottom:.4em}
@@ -34,23 +44,9 @@ a.bt:hover{filter:brightness(1.15)}
 .b.c{padding:.7em 1em;border:1px solid var(--ln);border-radius:8px;background:rgba(255,255,255,.06)}
 .s0{font-size:.9em}.s2{font-size:1.3em}.s3{font-size:1.7em}
 .b>img{display:block;width:100%;height:100%;object-fit:cover;border:1px solid var(--ln);border-radius:5px;box-shadow:0 4px 14px rgba(0,0,0,.5)}
-</style></head><body><header class="top"><div class="bar"><a class="brand" href="index.html"><img class="logo" src="logo.png" alt="" onerror="this.remove()"><span>StompWiki</span></a><nav><a href="index.html">Home</a><a href="category.html">Categories</a></nav></div></header><article class="stage"><h1>Stompganity</h1>
-<div class="cv" style="height:35.9375cqw">
-<div id="b_rug0e91" class="b" style="left:70.3125%;top:0cqw;width:29.6875%;height:31.25cqw"><img src="stompganity.png" alt=""></div>
-<div id="b_8v930cw" class="b" style="left:0.78125%;top:5.46875cqw;width:69.53125%;min-height:24.21875cqw;font-size:2.5cqw">THUd thUD THUD THUD THUD DAMN DAMN DAMN heat heat heat heat<br><br>(coming soon) Watch the full history episode on stompganity.</div>
-</div></article><script>function A(e){var d=e.dataset,t=document.getElementById(d.tgt);if(!t)return false;var a=d.act;if(a=='toggle')t.classList.toggle('hid');else if(a=='show')t.classList.remove('hid');else if(a=='hide')t.classList.add('hid');else if(a=='swap'){var i=t.querySelector('img');if(i)i.src=d.val}else if(a=='play')P(t);return false}function P(e){var u=e.querySelector('audio');if(!u)return;if(u.paused){u.play();e.classList.add('playing')}else{u.pause();e.classList.remove('playing')}}function T(e){var k=e.closest('.b'),i=[].indexOf.call(e.parentNode.children,e);[].forEach.call(e.parentNode.children,function(x,j){x.classList.toggle('on',j==i)});[].forEach.call(k.querySelectorAll('img'),function(m,j){m.classList.toggle('hid',j!=i)})}</script><div id="warn" role="dialog" aria-modal="true" aria-labelledby="warnT"><div class="warnB"><h2 id="warnT">&#9888; Warning</h2><p>Please note this site is not a real wiki. It is a very complex inside joke / project. It has blood, and a bunch of other nasty stuff.</p><div class="warnR"><button type="button" onclick="warnOk()">I understand, continue</button><button type="button" class="warnX" onclick="warnNo()">Leave</button></div></div></div>
-<style>
-#warn{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(8,1,3,.96);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
-.warnB{max-width:30rem;padding:1.6rem 1.8rem;border:1px solid rgba(255,150,150,.4);border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 48%,rgba(28,0,6,.3) 50%,rgba(110,20,32,.35)),rgba(42,8,14,.9);box-shadow:0 0 40px rgba(255,60,60,.25),inset 0 1px 0 rgba(255,255,255,.3);color:#fdeceb;text-align:center}
-.warnB h2{margin:0 0 .6rem;font-size:1.6rem;color:#ff5c5c;text-shadow:0 0 14px rgba(255,92,92,.6)}
-.warnB p{margin:0 0 1.2rem}
-.warnR{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
-.warnR button{padding:.45rem 1.1rem;border:1px solid #ff9b9b;border-radius:6px;background:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,.08) 49%,rgba(90,0,10,.1) 50%,rgba(255,110,110,.3)),#c81e2e;color:#fff;font:inherit;font-weight:600;cursor:pointer;text-shadow:0 1px 1px rgba(0,0,0,.6)}
-.warnR button.warnX{background:rgba(96,18,30,.5);font-weight:400}
-.warnR button:hover{filter:brightness(1.2)}
-</style>
-<script>
-try{if(sessionStorage.getItem('warned'))document.getElementById('warn').remove()}catch(e){}
-function warnOk(){try{sessionStorage.setItem('warned','1')}catch(e){}document.getElementById('warn').remove()}
-function warnNo(){history.length>1?history.back():location.href='about:blank'}
-</script><script type="application/json" id="pm-data">{"k":"page","o":{"id":"2cgi5vo","title":"Stompganity","desc":"A working name for our wonderful study group!","tags":"articles","cover":"stompganity.png","fname":"","hid":0,"bgm":"","vol":0.5,"blocks":[{"id":"rug0e91","t":"img","v":"stompganity.png","x":900,"y":0,"w":380,"h":400,"s":1,"c":0,"fs":16,"col":""},{"id":"8v930cw","t":"p","v":"THUd thUD THUD THUD THUD DAMN DAMN DAMN heat heat heat heat\u003cbr>\u003cbr>(coming soon) Watch the full history episode on stompganity.","x":10,"y":70,"w":890,"h":310,"s":1,"c":0,"fs":32,"col":""}]}}</script></body></html>
+</style></head><body><header class="top"><div class="bar"><a class="brand" href="index.html"><img class="logo" src="logo.png" alt="" onerror="this.remove()"><span>StompWiki</span></a><nav><a href="index.html">Home</a><a href="category.html#articles">Articles</a><a href="category.html#characters">Characters</a><a href="category.html#important">Important</a><a href="page_full-stompgame-timeline.html">Full StompGame Timeline</a></nav></div></header><article class="stage"><h1>Stompganity</h1>
+<div class="cv" style="height:85.15625cqw">
+<div id="b_rug0e91" data-y="0" data-h="400" class="b" style="left:70.3125%;top:0cqw;width:29.6875%;height:31.25cqw"><img src="stompganity.png" alt=""></div>
+<div id="b_8v930cw" data-y="70" data-h="310" class="b" style="left:0.78125%;top:5.46875cqw;width:69.53125%;min-height:24.21875cqw;font-size:2.5cqw">THUd thUD THUD THUD THUD DAMN DAMN DAMN heat heat heat heat<br><br>Watch the StompToons episode on Stompganity</div>
+<div id="b_qzzclt5" data-y="390" data-h="640" class="b" style="left:0.78125%;top:30.46875cqw;width:89.84375%;height:50cqw"><iframe src="https://www.youtube.com/embed/RuGwmRt3Ekw" allowfullscreen loading="lazy"></iframe></div>
+</div></article><script>try{if(sessionStorage.getItem('muted'))[].forEach.call(document.querySelectorAll('audio'),function(x){x.muted=true})}catch(e){}function A(e){var d=e.dataset,t=document.getElementById(d.tgt);if(!t)return false;var a=d.act;if(a=='toggle')t.classList.toggle('hid');else if(a=='show')t.classList.remove('hid');else if(a=='hide')t.classList.add('hid');else if(a=='swap'){var i=t.querySelector('img');if(i)i.src=d.val}else if(a=='play')P(t);return false}function P(e){var u=e.querySelector('audio');if(!u)return;if(u.paused){u.play();e.classList.add('playing')}else{u.pause();e.classList.remove('playing')}}function T(e){var k=e.closest('.b'),i=[].indexOf.call(e.parentNode.children,e);[].forEach.call(e.parentNode.children,function(x,j){x.classList.toggle('on',j==i)});[].forEach.call(k.querySelectorAll('img'),function(m,j){m.classList.toggle('hid',j!=i)})}</script><script type="application/json" id="pm-data">{"k":"page","o":{"id":"2cgi5vo","title":"Stompganity","desc":"A working name for our wonderful study group!","tags":"articles","cover":"stompganity.png","fname":"","hid":0,"bgm":"","vol":0.5,"blocks":[{"id":"rug0e91","t":"img","v":"stompganity.png","x":900,"y":0,"w":380,"h":400,"s":1,"c":0,"fs":16,"col":""},{"id":"8v930cw","t":"p","v":"THUd thUD THUD THUD THUD DAMN DAMN DAMN heat heat heat heat\u003cbr>\u003cbr>Watch the StompToons episode on Stompganity","x":10,"y":70,"w":890,"h":310,"s":1,"c":0,"fs":32,"col":""},{"id":"qzzclt5","t":"embed","v":"https://youtu.be/RuGwmRt3Ekw?si=7Ax5761YLlY5V5WJ","x":10,"y":390,"w":1150,"h":640,"s":1,"c":0,"fs":16,"col":""}]}}</script></body></html>
